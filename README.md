@@ -123,6 +123,17 @@ Dữ liệu được xuất qua Serial Monitor theo định dạng CSV. Các c�
 
 ## 6. Kết quả và hình ảnh
 
+Thời gian lấy mẫu mục tiêu là 2000 ms. Kết quả được tổng hợp từ log thực nghiệm của hai chế độ `delay()` và `millis()`.
+
+| Chế độ | Số mẫu hợp lệ | Khoảng lấy mẫu quan sát được | Độ lệch so với mục tiêu |
+|---|---:|---:|---:|
+| A — `delay()` | 31 | Khoảng 2051 ms | Khoảng +51 ms |
+| B — `millis()` | 30 | 2000 ms | 0 ms |
+
+Ở bản A, khoảng đo thực tế gồm thời gian đọc cảm biến cộng với 2000 ms chờ, nên log cho thấy chu kỳ khoảng 2051 ms. Trong thời gian delay(), ngắt vẫn ghi nhận sự kiện nhấn nút, nhưng vòng lặp chỉ xử lý và in sự kiện sau khi kết thúc thời gian chờ; độ trễ phụ thuộc thời điểm bấm.
+
+Ở chế độ B, chương trình sử dụng millis() để kiểm tra thời điểm lấy mẫu tiếp theo mà không cần chặn toàn bộ vòng lặp bằng thời gian chờ. Log ghi nhận các mẫu cách nhau đúng 2000 ms
+
 ### 6.1. Kết quả nhiệt độ
 
 ![Kết quả nhiệt độ](nhietdo.png)
