@@ -74,22 +74,19 @@ Mẫu không hợp lệ không được thêm vào bộ lọc MA5. Chương trì
 
 ### 4.3. Bộ lọc trung bình trượt MA5
 
-Chương trình sử dụng bộ lọc Moving Average với cửa sổ tối đa 5 mẫu hợp lệ gần nhất. Bộ lọc được áp dụng riêng cho nhiệt độ và độ ẩm.
+Chương trình sử dụng bộ lọc trung bình trượt Moving Average với cửa sổ tối đa 5 mẫu hợp lệ gần nhất. Bộ lọc được áp dụng riêng cho nhiệt độ và độ ẩm.
 
-Công thức tính trung bình:
+**Cách tính:**
 
-\[
-MA_n = \frac{1}{n}\sum_{i=1}^{n} x_i
-\]
+Giá trị trung bình = Tổng các giá trị mẫu hợp lệ / Số lượng mẫu hợp lệ.
 
 Trong đó:
+- Tổng các giá trị mẫu hợp lệ là tổng nhiệt độ hoặc độ ẩm của các mẫu được đưa vào bộ lọc.
+- Số lượng mẫu hợp lệ là số mẫu đang được sử dụng để tính trung bình, tối đa là 5 mẫu.
+- Khi chưa đủ 5 mẫu, chương trình tính trung bình trên số mẫu hợp lệ hiện có.
+- Các mẫu không hợp lệ không được đưa vào bộ lọc.
 
-- \(x_i\) là giá trị của mẫu hợp lệ thứ \(i\).
-- \(n\) là số mẫu hợp lệ đang được sử dụng, tối đa bằng 5.
-
-Khi chưa đủ 5 mẫu, chương trình tính trung bình trên số mẫu hợp lệ hiện có. Khi xuất hiện mẫu lỗi, mẫu đó không được thêm vào lịch sử lọc.
-
-Mục đích của MA5 là làm giảm sự dao động ngắn hạn của số đo và giúp quan sát xu hướng nhiệt độ, độ ẩm ổn định hơn.
+Bộ lọc MA5 giúp làm giảm dao động ngắn hạn của dữ liệu, từ đó giúp giá trị nhiệt độ và độ ẩm hiển thị ổn định hơn.
 
 ### 4.4. Hai chế độ lập lịch lấy mẫu
 
