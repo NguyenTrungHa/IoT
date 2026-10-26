@@ -120,7 +120,6 @@ Dữ liệu được xuất qua Serial Monitor theo định dạng CSV. Các c�
 | `interval_actual_ms` | Khoảng thời gian thực tế giữa các lần lấy mẫu |
 | `mode` | Chế độ `delay` hoặc `millis` |
 
-Chương trình in dữ liệu ra Serial Monitor; việc lưu thành file `data.csv` được thực hiện bằng cách sao chép log và lưu lại. Vì vậy, cần phân biệt chức năng xuất log của chương trình với thao tác lưu file dữ liệu.
 
 ## 6. Kết quả và hình ảnh
 
