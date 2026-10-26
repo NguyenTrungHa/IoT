@@ -79,7 +79,7 @@ Chương trình sử dụng bộ lọc Moving Average với cửa sổ tối đa
 Công thức tính trung bình:
 
 \[
-MA_n=\frac{1}{n}\sum_{i=1}^{n}x_i
+MA_n = \frac{1}{n}\sum_{i=1}^{n} x_i
 \]
 
 Trong đó:
